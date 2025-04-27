@@ -1,0 +1,104 @@
+:root {
+  --blue-dark: #1f2b85;
+  --blue-navy: #262a4f;
+  --gray-light: #b8bcc7;
+  --bg-white: #ffffff;
+  --font-normal: "Montserrat", sans-serif;
+  --font-heading: "Merriweather", serif;
+}
+html {
+  font-family: var(--font-normal);
+}
+body {
+  height: 5000px;
+}
+.bg-test {
+  background-color: greenyellow;
+}
+
+/* start header */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 120px;
+  transition: all 0.3s ease;
+  z-index: 999; /* Để nổi lên trên hết */
+  display: flex;
+  align-items: center;
+}
+
+#header.scrolled {
+  height: auto;
+
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+#header .row {
+  align-items: center;
+}
+.header__logo {
+  display: flex;
+  justify-content: center; /* Căn giữa theo trục ngang */
+  align-items: center; /* Căn giữa theo trục dọc */
+  height: 60px;
+}
+.header__logo h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--gray-light);
+  font-family: var(--font-normal);
+}
+.header__nav #navbar {
+  display: flex;
+  justify-content: end;
+}
+
+.navbar__btn {
+  height: 46px;
+  width: 147px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
+}
+.header__nav #navbar a {
+  color: var(--gray-light);
+  font-size: 17px;
+  font-weight: 600;
+}
+.header__nav #navbar a.a--active {
+  color: var(--blue-dark);
+}
+.header__nav #navbar a:hover {
+  color: var(--blue-dark);
+}
+/* end header */
+
+/* start hero */
+.hero {
+  padding: 300px 0px;
+  text-align: center;
+  background-image: url(../images/hero-background-02.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero h1 {
+  font-size: 60px;
+  color: var(--blue-dark);
+  font-weight: 800;
+  line-height: 100%;
+  margin-bottom: 10px;
+}
+.hero h1:nth-of-type(2) {
+  color: var(--blue-navy);
+}
+.hero p {
+  color: var(--gray-light);
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 50px;
+}
