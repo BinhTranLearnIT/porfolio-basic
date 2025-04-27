@@ -3,6 +3,10 @@
   --blue-navy: #262a4f;
   --gray-light: #b8bcc7;
   --bg-white: #ffffff;
+  --bg-pj-02: #d7d8df;
+  --bg-pj-01: #dbe3ff;
+  --bg-pj-03:#c7e0ff;
+  --bg-pj-04:#c9ecd0;
   --font-normal: "Montserrat", sans-serif;
   --font-heading: "Merriweather", serif;
 }
@@ -88,12 +92,12 @@ body {
   cursor: pointer;
   font-weight: 800;
 }
-.navbar__action-btn button:hover {
+/* .navbar__action-btn button:hover {
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   background: linear-gradient(90deg, #0066ff, #00ccff);
 
-}
+} */
 /* end header */
 
 /* start hero */
@@ -130,7 +134,7 @@ section{
   position: relative;
 }
 .project__img{
-  height:  200px;
+
   object-fit: contain;
   
   position: relative;
@@ -139,7 +143,7 @@ section{
   justify-content: center;
 }
 .project__img img{
-  max-height: 180px;
+  max-height: 250px;
   width: auto;
 }
 .project__img--bg{
@@ -147,8 +151,8 @@ section{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 250px;
-  height: 250px;
+  width: 400px;
+  height: 400px;
   background-color: #ffd2a6;
   border-radius: 50%;
   z-index: 0;
@@ -163,7 +167,7 @@ section{
 }
 .project__info--name{
   font-size: 32px;
-  color: var(--blue-navy);
+  color: var(--blue-dark);
   font-weight: 800;
   margin-bottom: 20px;
 }
@@ -188,4 +192,55 @@ section{
   margin-left: 5px;
   margin-right: 5px;
   margin-bottom: 8px;
+}
+.project__info--link{
+  margin-top: 50px;
+}
+.project__info--link a{
+    padding: 10px 24px;
+    background-color: var(--blue-dark);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 20px;
+   
+}
+.hvr-radial-out::before{
+  background: linear-gradient(90deg, #0066ff, #00ccff);
+}
+.project-02 .project__img--bg{
+  background-color: var(--bg-pj-02);
+}
+.project-03 .project__img--bg{
+  background-color: var(--bg-pj-01);
+}
+.project-03 .project__img img{
+  max-height: 400px;
+}
+.project-04 .project__img--bg{
+  background-color: var(--bg-pj-04);
+}
+.project-04 .project__img img{
+  max-height: 400px;
+}
+
+.about{
+  background-color: #b5b9c6;
+  background-image: url(../images/hero-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about__heading{
+ justify-content: center;
+ margin-top: 10px;
+ margin-bottom: 30px;
+}
+.about__heading h1{
+  font-size: 32px;
+  color: var(--blue-navy)
+
+}
+.about__avatar{
+ display: flex;
+ justify-content: center;
 }
