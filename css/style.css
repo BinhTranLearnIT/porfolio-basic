@@ -68,7 +68,7 @@ body {
 .header__nav #navbar a {
   color: var(--gray-light);
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .header__nav #navbar a.a--active {
   color: var(--blue-dark);
@@ -76,11 +76,29 @@ body {
 .header__nav #navbar a:hover {
   color: var(--blue-dark);
 }
+.navbar__action-btn button{
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+   padding: 12px 20px;
+  border-radius: 30px;
+  border: 4px;
+  background-color: var(--blue-dark);
+  margin-left: 33px;
+  cursor: pointer;
+  font-weight: 800;
+}
+.navbar__action-btn button:hover {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #0066ff, #00ccff);
+
+}
 /* end header */
 
 /* start hero */
 .hero {
-  padding: 300px 0px;
+  padding: 220px 0px;
   text-align: center;
   background-image: url(../images/hero-background-02.jpg);
   background-size: cover;
@@ -101,4 +119,73 @@ body {
   font-size: 32px;
   font-weight: 600;
   margin-top: 50px;
+}
+
+section{
+  padding: 120px 0px;
+}
+.project__imgs{
+  padding: 20px 0px;
+  text-align: center;
+  position: relative;
+}
+.project__img{
+  height:  200px;
+  object-fit: contain;
+  
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+.project__img img{
+  max-height: 180px;
+  width: auto;
+}
+.project__img--bg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  background-color: #ffd2a6;
+  border-radius: 50%;
+  z-index: 0;
+}
+.project-01 .project__img{
+  transform: translateY(15px);
+}
+
+.project__info{
+  text-align: center;
+
+}
+.project__info--name{
+  font-size: 32px;
+  color: var(--blue-navy);
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.project__info--description{
+  font-size: 14px;
+  color: black;
+  font-weight: 600;
+}
+.project__info--tech{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.project__info--tech__card{
+  color: #b5b9c6;
+  background-color: #f2f3f7;
+  padding: 5px 12px;
+  font-size: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 8px;
 }
