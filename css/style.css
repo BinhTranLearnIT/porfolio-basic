@@ -12,6 +12,7 @@
 }
 html {
   font-family: var(--font-normal);
+  scroll-behavior: smooth;
 }
 body {
   height: 5000px;
@@ -30,7 +31,7 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   height: 120px;
   transition: all 1s ease;
-  z-index: 999; /* Để nổi lên trên hết */
+  z-index: 999;
   display: flex;
   align-items: center;
 }
@@ -45,8 +46,8 @@ body {
 }
 .header__logo {
   display: flex;
-  justify-content: center; /* Căn giữa theo trục ngang */
-  align-items: center; /* Căn giữa theo trục dọc */
+  justify-content: center;
+  align-items: center;
   height: 60px;
 }
 .header__logo h1 {
@@ -58,6 +59,7 @@ body {
 .header__nav #navbar {
   display: flex;
   justify-content: end;
+  align-items: center;
 }
 
 .navbar__btn {
@@ -91,6 +93,7 @@ body {
   cursor: pointer;
   font-weight: 800;
 }
+
 /* .navbar__action-btn button:hover {
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
@@ -100,12 +103,45 @@ body {
 /* end header */
 
 /* start hero */
-.hero {
+/* .hero {
   padding: 220px 0px;
   text-align: center;
-  background-image: url(../images/hero-background-02.jpg);
+  background-image: url(../images/snapedit.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 1;
+} */
+.hero {
+  position: relative;
+  z-index: 0; /* Quan trọng: đảm bảo overlay nằm dưới phần chữ */
+  padding: 220px 0;
+  text-align: center;
+  background-image: url("../images/bg-02.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6);
+  z-index: 1;
+}
+
+/* Bọc chữ vào div riêng */
+.hero-content {
+  position: relative;
+  z-index: 2; /* Chữ nằm trên lớp overlay */
+  color: white;
 }
 .hero h1 {
   font-size: 60px;
@@ -131,6 +167,7 @@ section {
   padding: 20px 0px;
   text-align: center;
   position: relative;
+  margin-bottom: 100px;
 }
 .project__img {
   object-fit: contain;
@@ -151,6 +188,7 @@ section {
   transform: translate(-50%, -50%);
   width: 400px;
   height: 400px;
+
   background-color: #ffd2a6;
   border-radius: 50%;
   z-index: 0;
@@ -163,7 +201,7 @@ section {
   text-align: center;
 }
 .project__info--name {
-  font-size: 32px;
+  font-size: 36px;
   color: var(--blue-dark);
   font-weight: 800;
   margin-bottom: 20px;
@@ -219,12 +257,19 @@ section {
 .project-04 .project__img img {
   max-height: 400px;
 }
+/* end project */
 
+/* start about */
 .about {
   background-color: #b5b9c6;
-  background-image: url(../images/hero-background.jpg);
+  background-image: url(../images/bg-02.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+}
+.about .container {
+  position: relative;
+  z-index: 1;
 }
 .about__heading {
   justify-content: center;
@@ -238,19 +283,21 @@ section {
 }
 
 .about__avatar {
+  padding-right: 40px;
+  margin-bottom: 30px;
 }
 .about__avatar--frame {
   box-sizing: border-box;
   width: 100%;
-  max-width: 500px;
+  max-width: 350px;
   border-radius: 30px;
   margin-top: 35px;
   outline: 10px solid var(--blue-navy);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .about__avatar img {
-  width: 100%;
-  max-width: 500px;
   border-radius: 30px;
   position: relative;
   top: -32px;
@@ -273,12 +320,85 @@ section {
   margin-bottom: 32px;
 }
 .about__infomation .info__btn {
-  width: 124px;
-  height: 60px;
+  padding: 10px 24px;
   font-size: 16px;
   background-color: var(--blue-dark);
   color: white;
   font-weight: 700;
   border-radius: 4px;
   cursor: pointer;
+  border-radius: 30px;
+}
+/* end about */
+
+/* start skill */
+.section__heading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 6px;
+}
+.section__heading h1 {
+  font-size: 42px;
+  color: var(--blue-navy);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.section__content {
+}
+.section__content h2 {
+  font-size: 30px;
+  color: var(--blue-navy);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.skills__logo-list {
+  flex-wrap: wrap;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.skills__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+
+  margin-bottom: 65px;
+}
+.skills__logo img {
+  max-height: 100px;
+  margin-bottom: 17px;
+}
+.skills__logo figcaption {
+  font-size: 24px;
+  font-family: var(--font-normal);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* start footer */
+footer {
+  background-color: var(--blue-navy);
+  text-align: center;
+  color: white;
+  padding: 60px 0px;
+}
+footer span {
+  font-size: 14px;
+  font-weight: 500;
+}
+footer ul {
+  display: flex;
+
+  justify-content: center;
+}
+footer ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+footer ul li a img {
+  width: 30px;
+  height: 30px;
 }

@@ -35,13 +35,13 @@
           <div class="col-9 header__nav">
             <nav id="navbar">
               <div class="navbar__btn">
-                <a href="" class="a--active">Home</a>
+                <a href="#" class="a--active">Home</a>
               </div>
               <div class="navbar__btn">
-                <a href="">About</a>
+                <a href="#about">About</a>
               </div>
               <div class="navbar__btn">
-                <a href="">Resume</a>
+                <a href="#skills">Skills</a>
               </div>
               <div class="navbar__action-btn">
                 <button class="hvr-radial-out">Download CV</button>
@@ -51,22 +51,27 @@
         </div>
       </div>
     </header>
+
     <section class="hero">
-      <h1>Hello! I am Binh,</h1>
-      <h1>a Front-end Developer</h1>
-      <h1>based in Ho Chi Minh city.</h1>
-      <p>Welcome to my Porfolio</p>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Hello! I am Binh,</h1>
+        <h1>a Front-end Developer</h1>
+        <h1>based in Ho Chi Minh city.</h1>
+        <p>Welcome to my Porfolio</p>
+      </div>
     </section>
+
     <section class="project-01">
       <div class="container">
         <div class="row">
-          <div class="project__imgs col-7">
+          <div class="project__imgs col-lg-7 col-12">
             <div class="project__img--bg"></div>
             <div class="project__img">
               <img src="./images/project-01.png" alt="" />
             </div>
           </div>
-          <div class="project__info col-5">
+          <div class="project__info col-lg-5 col-12">
             <h1 class="project__info--name">Hop pond</h1>
             <p class="project__info--description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
@@ -87,10 +92,11 @@
         </div>
       </div>
     </section>
+
     <section class="project-02">
       <div class="container">
         <div class="row">
-          <div class="project__info col-5">
+          <div class="project__info col-lg-5 col-12 order-1 order-lg-0">
             <h1 class="project__info--name">Wifinder Plannet</h1>
             <p class="project__info--description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
@@ -108,7 +114,7 @@
               <a href="" class="hvr-radial-out"> Demo </a>
             </button>
           </div>
-          <div class="project__imgs col-7">
+          <div class="project__imgs col-lg-7 col-12">
             <div class="project__img--bg"></div>
             <div class="project__img">
               <img src="./images/project-02.png" alt="" />
@@ -117,16 +123,17 @@
         </div>
       </div>
     </section>
+
     <section class="project-03">
       <div class="container">
         <div class="row">
-          <div class="project__imgs col-7">
+          <div class="project__imgs col-lg-7 col-12">
             <div class="project__img--bg"></div>
             <div class="project__img">
               <img src="./images/project-03.png" alt="" />
             </div>
           </div>
-          <div class="project__info col-5">
+          <div class="project__info col-lg-5 col-12">
             <h1 class="project__info--name">Phone App</h1>
             <p class="project__info--description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
@@ -151,7 +158,7 @@
     <section class="project-04">
       <div class="container">
         <div class="row">
-          <div class="project__info col-5">
+          <div class="project__info col-lg-5 col-12 col-12 order-1 order-lg-0">
             <h1 class="project__info--name">And more</h1>
             <p class="project__info--description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
@@ -169,7 +176,7 @@
               <a href="" class="hvr-radial-out"> Demo </a>
             </button>
           </div>
-          <div class="project__imgs col-7">
+          <div class="project__imgs col-lg-7 col-12">
             <div class="project__img--bg"></div>
             <div class="project__img">
               <img src="./images/project-04.png" alt="" />
@@ -178,15 +185,16 @@
         </div>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
+      <div class="hero-overlay"></div>
       <div class="container">
         <div class="row">
-          <div class="about__avatar col-6">
+          <div class="about__avatar col-lg-6 col-12">
             <div class="about__avatar--frame">
-              <img src="https://picsum.photos/150/150" alt="" />
+              <img src="./images/avatar.jpg" alt="" />
             </div>
           </div>
-          <div class="about__infomation col-6">
+          <div class="about__infomation col-lg-6 col-12">
             <h1 class="about__heading">About me</h1>
 
             <p class="info__des">
@@ -203,6 +211,75 @@
         </div>
       </div>
     </section>
+    <section class="skills" id="skills">
+      <div class="container">
+        <div class="section__heading">
+          <h1>Skills</h1>
+        </div>
+        <div class="section__content">
+          <div class="skills__logo-list row">
+            <h2 class="col-12">Using now:</h2>
+            <figure class="col-lg-3 col-6 skills__logo">
+              <img src="./images/logo-html.png" alt="html" />
+              <figcaption>HTML5</figcaption>
+            </figure>
+            <figure class="col-lg-3 col-6 skills__logo">
+              <img src="./images/logo-css.png" alt="css" />
+              <figcaption>css3</figcaption>
+            </figure>
+            <figure class="col-lg-3 col-6 skills__logo">
+              <img src="./images/logo-sass.png" alt="sass" />
+              <figcaption>sass</figcaption>
+            </figure>
+            <figure class="col-lg-3 col-6 skills__logo">
+              <img src="./images/logo-js.png" alt="js" />
+              <figcaption>javascript</figcaption>
+            </figure>
+            <figure class="col-lg-3 col-6 skills__logo">
+              <img src="./images/logo-react.png" alt="reactjs" />
+              <figcaption>reactjs</figcaption>
+            </figure>
+            <figure class="col-lg-3 col-6 skills__logo">
+              <img src="./images/logo-bootstrap.png" alt="bootstrap" />
+              <figcaption>bootstrap</figcaption>
+            </figure>
+            <figure class="col-lg-3 col-6 skills__logo">
+              <img src="./images/logo-git.png" alt="git" />
+              <figcaption>git</figcaption>
+            </figure>
+            <figure class="col-lg-3 col-6 skills__logo">
+              <img src="./images/logo-figma.png" alt="figma" />
+              <figcaption>figma</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <ul class="footer__social-media-list">
+        <li>
+          <a href="">
+            <img src="./images/icon-face.svg" alt="facebook" />
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="./images/icon-linke.svg" alt="linke" />
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="./images/icon-insta.svg" alt="insta" />
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="./images/icon-mail.svg" alt="mail" />
+          </a>
+        </li>
+      </ul>
+      <span> <b> @2025 Tran Ngoc Bao Binh </b> All Rights Reserved</span>
+    </footer>
     <script src="./js/script.js"></script>
   </body>
 </html>

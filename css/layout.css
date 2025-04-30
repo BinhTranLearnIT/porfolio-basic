@@ -411,3 +411,35 @@
     margin-left: 100%;
   }
 }
+
+.order-0 {
+  order: 0;
+}
+.order-1 {
+  order: 1;
+}
+/* Small devices (≥576px) */
+@media (min-width: 576px) {
+  .order-sm-0 {
+    order: 0;
+  }
+  .order-sm-1 {
+    order: 1;
+  }
+}
+@media (min-width: 992px) {
+  .order-lg-0 {
+    order: 0;
+  }
+  .order-lg-1 {
+    order: 1;
+  }
+}
+@media (min-width: 1200px) {
+  .order-xl-0 {
+    order: 0;
+  }
+  .order-xl-1 {
+    order: 1;
+  }
+}
