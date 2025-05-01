@@ -15,7 +15,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  height: 5000px;
+  overflow-x: hidden;
 }
 .bg-test {
   background-color: greenyellow;
