@@ -35,6 +35,57 @@ body {
   display: flex;
   align-items: center;
 }
+.header__hamburger {
+  cursor: pointer;
+  float: right;
+  padding: 12px 12px;
+}
+#toogle-nav {
+  display: none;
+}
+.header__hamburger i {
+  font-size: 36px;
+  color: var(--blue-navy);
+  transition: 0.2s linear;
+}
+.header__hamburger:hover i {
+  color: var(--bg-pj-01);
+}
+#toogle-nav:checked ~ .header--sm {
+  display: flex;
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  padding-top: 100px;
+}
+
+.header--sm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background-color: white;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  max-height: 0;
+  transform: translateY(-20px);
+  transition: all 0.4s ease;
+  opacity: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.header--lg {
+  display: none;
+}
+@media (min-width: 992px) {
+  .header__hamburger {
+    display: none;
+  }
+  .header--lg {
+    display: flex;
+  }
+}
 
 #header.scrolled {
   height: auto;
@@ -62,7 +113,7 @@ body {
   align-items: center;
 }
 
-.navbar__btn {
+#navbar .navbar__btn {
   height: 46px;
   width: 147px;
   display: flex;
@@ -81,7 +132,7 @@ body {
 .header__nav #navbar a:hover {
   color: var(--blue-dark);
 }
-.navbar__action-btn button {
+.header__nav #navbar .navbar__action-btn button {
   color: #ffffff;
   font-size: 17px;
   font-weight: 600;
@@ -94,6 +145,38 @@ body {
   font-weight: 800;
 }
 
+#navbar--sm .navbar__action-btn button {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 4px;
+  background-color: var(--blue-dark);
+  cursor: pointer;
+  font-weight: 800;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#navbar--sm .navbar__btn {
+  height: 46px;
+  width: 147px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#navbar--sm .navbar__btn label {
+  color: var(--gray-light);
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#navbar--sm .navbar__btn label:hover {
+  color: var(--blue-dark);
+}
 /* .navbar__action-btn button:hover {
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;

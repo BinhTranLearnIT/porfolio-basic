@@ -28,7 +28,39 @@
   <body>
     <header id="header">
       <div class="container">
-        <div class="row">
+        <input type="checkbox" name="toogle" id="toogle-nav" />
+        <label class="header__hamburger" for="toogle-nav">
+          <i class="fas fa-bars"></i>
+        </label>
+
+        <div class="header--sm">
+          <nav id="navbar--sm">
+            <div class="navbar__btn">
+              <label
+                for="toogle-nav"
+                class="a--active"
+                onclick="location.href='#'"
+                >Home</label
+              >
+            </div>
+            <div class="navbar__btn">
+              <label for="toogle-nav" onclick="location.href='#about'"
+                >About</label
+              >
+            </div>
+            <div class="navbar__btn">
+              <label for="toogle-nav" onclick="location.href='#skills'"
+                >Skills</label
+              >
+            </div>
+            <div class="navbar__action-btn">
+              <label for="toogle-nav" onclick="downloadCV()">
+                <button class="hvr-radial-out">Download CV</button>
+              </label>
+            </div>
+          </nav>
+        </div>
+        <div class="row header--lg">
           <div class="col-3 header__logo">
             <h1>BT</h1>
           </div>

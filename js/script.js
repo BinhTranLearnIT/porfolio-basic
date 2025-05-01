@@ -21,16 +21,3 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scrolled");
   }
 });
-
-const hamburger = document.getElementById("hamburger");
-const headerNav = document.getElementById("headerNav");
-
-hamburger.addEventListener("click", () => {
-  headerNav.classList.toggle("show");
-});
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    headerNav.classList.remove("show");
-  });
-});
